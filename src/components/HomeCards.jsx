@@ -12,7 +12,7 @@ const HomeCrads = () => {
             </p>
             <a
               href="/browse-job.html"
-              className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600"
+              className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
             >
               Browse Job
             </a>
