@@ -12,7 +12,7 @@ const JobListings = ({ isHome = false }) => {
     const fetchJobs = async () => {
       const apiUrl = isHome ? "/jobs?_limit=3" : "/jobs";
       try {
-        const res = await fetch(`http://localhost:5000${apiUrl}`);
+        const res = await fetch(`/api${apiUrl}`);
         const data = await res.json();
         setJobs(data);
       } catch (error) {
@@ -21,7 +21,10 @@ const JobListings = ({ isHome = false }) => {
         setLoading(false);
       }
     };
-    fetchJobs();
+    // Timeout to test data loading on spinner
+    setTimeout(() => {
+      fetchJobs();
+    }, 500);
   }, []);
 
   return (
